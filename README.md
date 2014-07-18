@@ -24,18 +24,42 @@ sudo make altinstall
 sudo apt-get install python-pip
 
 ///////////////////Les dépendances pour que PostgreSQL puisse travailler avec python /////////////
+
 sudo apt-get install libpq-dev python-dev
 
 ///////////////////////Installer PostgreSQL/////////////////////
+
 sudo apt-get install postgresql postgresql-contrib
 
 ////////////////////////Configurer Postgres/////
+
 sudo su - postgres
+
 createdb taxi
+
 sudo su - postgres
+
 createuser -P
-/////Requete pour ajouter l'admin ////
+
+/////Requete pour ajouter les droits ////
+
 psql //pour passer en mode requête
-GRANT ALL PRIVILEGES ON DATABASE taxi TO admin; ///
-///////////////////////////////////////
+
+GRANT ALL PRIVILEGES ON DATABASE taxi TO admin; /
+
+//////////////Téléchrager tout ce projet //////////////////
+
+
+/////////////lancer l'environnment virtuel  ////
+
+
+source django_env/bin/activate
+
+
+/////////////lancer le serveur Web////
+
+
+python manage.py runserver
+
+
 
