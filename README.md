@@ -63,3 +63,4 @@ python manage.py runserver
 
 
 
+//////Enjoy en accedant à l'adresse http://127.0.0.1:8888/taxi/planning   ////////////////////
